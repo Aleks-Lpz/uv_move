@@ -20,11 +20,11 @@ If you are developing a production application, we recommend using TypeScript wi
 | Elemento | Evidencia / Descripción |
 | :--- | :--- |
 | **Requisito** | **R1:** Autenticación de usuarios y gestión de inicio/fin de viajes. |
-| **Regla de negocio** | **RN1:** Usuario activo[cite: 2, 3].<br>**RN2:** Máximo 1 vehículo en uso simultáneo[cite: 2, 3]. |
-| **Módulo solicitante** | `Gestor_Reserva`[cite: 2, 3] |
-| **Interfaz / Servicio** | `ServicioAutenticacion` y `ServicioRegistroViaje`[cite: 2, 3] |
-| **Contrato** | `VerificarAutorizacion(id_usuario, id_vehiculo)`[cite: 2, 3] |
-| **Módulo proveedor** | `Gestor_Autenticacion`[cite: 3] |
-| **Tablas Db2** | `USUARIO`, `VEHICULO`, `RESERVACION`, `VIAJE`[cite: 2] |
-| **Escenario exitoso** | Registro de Viaje #101 con estado `'EN_CURSO'` en Db2[cite: 2]. |
-| **Escenario de rechazo**| Intento de 2° viaje simultáneo bloqueado por regla **RN2**[cite: 2, 3]. |
+| **Regla de negocio** | **RN1:** Usuario activo.<br>**RN2:** Máximo 1 vehículo en uso simultáneo |
+| **Módulo solicitante** | `Gestor_Reserva` |
+| **Interfaz / Servicio** | `ServicioAutenticacion` y `ServicioRegistroViaje` |
+| **Contrato** | `VerificarAutorizacion(id_usuario, id_vehiculo)` |
+| **Módulo proveedor** | `Gestor_Autenticacion` |
+| **Tablas Db2** | `USUARIO`, `VEHICULO`, `RESERVACION`, `VIAJE` |
+| **Escenario exitoso** | Registro de Viaje #101 con estado `'EN_CURSO'` en Db2 |
+| **Escenario de rechazo**| Intento de 2° viaje simultáneo bloqueado por regla **RN2** |
